@@ -12,9 +12,11 @@ html, body{
 .main .title{
     font-size: 40px;
     text-align: center;
+    color: aliceblue;
 }
 .main .sub-title{
     font-size: 28px;
     text-align: center;
     margin-top: 10px;
+    color: aliceblue;
 }
