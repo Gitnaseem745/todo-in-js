@@ -8,7 +8,7 @@ let addTodo = document.querySelector('.add-todo').addEventListener('click', func
     todo.style.border = '1px solid black';
     todo.style.height = '38px'
     todo.style.width = '40%'
-    todo.style.paddingTop = '10px'
+    todo.style.padding = '10px'
     todo.style.marginTop = '10px'
     todo.appendChild(todoText)
     yourTodo.appendChild(todo)
@@ -16,9 +16,13 @@ let addTodo = document.querySelector('.add-todo').addEventListener('click', func
     let btnText = document.createTextNode('Delete')
     delBtn.style.backgroundColor = 'red';
     delBtn.style.fontSize = '16px'
-    delBtn.style.height = '20px'
+    delBtn.style.height = '30px'
     delBtn.style.width = '50px'
     delBtn.style.display = 'inline-block'
     delBtn.appendChild(btnText)
     yourTodo.appendChild(delBtn)
+    delBtn.addEventListener('click',function(){
+        todo.remove()
+        delBtn.remove()
+    })
 })
