@@ -34,5 +34,11 @@ html, body{
 .create-todo .new-todo{
     background-color: #858585;
     border: 1px solid black;
-    
+    height: 70%;
+    width: 40%;
+}
+.create-todo .add-todo{
+    background-color: rgb(19, 146, 19);
+    height: 70%;
+    width: 50px;
 }
