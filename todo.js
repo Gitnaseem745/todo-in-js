@@ -1,28 +1,43 @@
-let yourTodo = document.querySelector('.created-todos')
+const yourTodo = document.querySelector('.created-todos')
 
-let addTodo = document.querySelector('.add-todo').addEventListener('click', function(){
-    let newTodo = document.querySelector('.new-todo').value
-    let todo = document.createElement("p")
-    let todoText = document.createTextNode(newTodo)
+const addTodo = document.querySelector('.add-todo').addEventListener('click', function(){
+    const newTodo = document.querySelector('.new-todo').value
+    const todoContainer = document.createElement('div');
+    todoContainer.style.display = 'flex'
+    todoContainer.style.alignItems = 'center'
+    todoContainer.style.marginTop = '10px'
+    yourTodo.appendChild(todoContainer)
+    
+    const todo = document.createElement("p")
+    const todoText = document.createTextNode(newTodo)
     todo.style.backgroundColor = '#858585';
     todo.style.border = '1px solid black';
     todo.style.height = '38px'
-    todo.style.width = '40%'
+    todo.style.width = 'auto'
     todo.style.padding = '10px'
-    todo.style.marginTop = '10px'
     todo.appendChild(todoText)
-    yourTodo.appendChild(todo)
-    let delBtn = document.createElement('button')
-    let btnText = document.createTextNode('Delete')
+    todoContainer.appendChild(todo)
+    const delBtn = document.createElement('button')
+    const btnText = document.createTextNode('Delete')
     delBtn.style.backgroundColor = 'red';
     delBtn.style.fontSize = '16px'
     delBtn.style.height = '30px'
     delBtn.style.width = '50px'
+    delBtn.style.marginLeft = '10px'
     delBtn.style.display = 'inline-block'
     delBtn.appendChild(btnText)
-    yourTodo.appendChild(delBtn)
+    todoContainer.appendChild(delBtn)
+    const editBtn = document.createElement('button')
+    const editText = document.createTextNode('Edit')
+    editBtn.style.backgroundColor = 'blue';
+    editBtn.style.fontSize = '16px'
+    editBtn.style.height = '30px'
+    editBtn.style.width = '50px'
+    editBtn.style.marginLeft = '10px'
+    editBtn.style.display = 'inline-block'
+    editBtn.appendChild(editText)
+    todoContainer.appendChild(editBtn)
     delBtn.addEventListener('click',function(){
-        todo.remove()
-        delBtn.remove()
+        todoContainer.remove()
     })
 })
