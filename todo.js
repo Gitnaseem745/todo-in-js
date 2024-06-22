@@ -15,7 +15,7 @@ const addTodo = document.querySelector('.add-todo').addEventListener('click', fu
     todo.style.backgroundColor = '#858585';
     todo.style.border = '1px solid black';
     todo.style.height = '38px';
-    todo.style.width = 'auto';
+    todo.style.width = '540px';
     todo.style.padding = '10px';
     todo.appendChild(todoText);
     todoContainer.appendChild(todo);

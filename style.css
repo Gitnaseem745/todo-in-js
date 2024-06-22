@@ -24,6 +24,7 @@ html, body{
     text-align: center;
     margin-top: 10px;
     color: gray;
+    text-transform: capitalize;
 }
 .create-todo{
     width: 100%;
