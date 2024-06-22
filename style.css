@@ -37,6 +37,7 @@ html, body{
     border: 1px solid black;
     height: 40%;
     width: 40%;
+    padding: 10px;
 }
 .create-todo .add-todo{
     background-color: rgb(19, 146, 19);
