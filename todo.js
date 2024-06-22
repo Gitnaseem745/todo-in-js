@@ -66,4 +66,4 @@ const addTodo = document.querySelector('.add-todo').addEventListener('click', fu
             saveBtn.remove()
     })
     })
-})
+}) 
