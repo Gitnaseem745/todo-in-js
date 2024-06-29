@@ -60,3 +60,14 @@ html, body{
     height: 40%;
     width: 40%;
 }
+
+/* responsiveness */
+
+@media (max-width: 576px){
+    .main .title{
+        font-size: 30px;
+    }
+    .main .sub-title{
+        font-size: 20px;
+    }
+}

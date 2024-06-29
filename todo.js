@@ -15,7 +15,8 @@ const addTodo = document.querySelector('.add-todo').addEventListener('click', fu
     todo.style.backgroundColor = '#858585';
     todo.style.border = '1px solid black';
     todo.style.height = '38px';
-    todo.style.width = '540px';
+    todo.style.width = '200px';
+    todo.style.overflowX = 'scroll';
     todo.style.padding = '10px';
     todo.appendChild(todoText);
     todoContainer.appendChild(todo);
@@ -49,7 +50,7 @@ const addTodo = document.querySelector('.add-todo').addEventListener('click', fu
     editBtn.addEventListener('click', function(){
 
         todo.contentEditable = 'true';
-        
+        editBtn.remove()
         const saveBtn = document.createElement('button');
         const saveText = document.createTextNode('Save');
         saveBtn.style.backgroundColor = 'Yellow';
@@ -64,6 +65,7 @@ const addTodo = document.querySelector('.add-todo').addEventListener('click', fu
         saveBtn.addEventListener('click', function(){
             todo.contentEditable = 'false'
             saveBtn.remove()
+            todoContainer.append(editBtn)
     })
     })
 }) 
